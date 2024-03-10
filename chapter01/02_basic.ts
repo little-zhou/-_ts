@@ -28,3 +28,6 @@ function sum(a: number, b: number): number {
 
 console.log(sum (1, 2)) // 2
 // console.log(sum (1, '2')); // 直接报错
+
+// https://blog.csdn.net/ks8380/article/details/131582424
+export {} // 解决不同文件同名变量报错问题,原因是ts文件默认是全局文件
