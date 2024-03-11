@@ -1,0 +1,49 @@
+{
+  /*
+     tsconfig.json是ts编译器的配置文件,ts编译器可以根据它的信息来对代码进行编译
+     "include" 用来指定哪些TS文件需要被编译
+        路径: ** 表示任意目录
+               * 表示任意文件
+  */
+  "compilerOptions": {
+    // 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'es2022', 'esnext'
+    "target": "ES6",
+    // module 指定要使用的模块化的规范 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext', 'preserve'
+    "module": "es6",
+    "removeComments": true,
+
+    // 指定编译之后的文件的存放路径
+    "outDir": "./dist",
+
+    // 将代码合并成为一个文件
+    // 设置outFile后,所有的全局作用域中的代码会合并到一个文件中
+    // "outFile": "./dist/app.js",
+
+    // 是否对js文件进行编译,默认false
+    "allowJs": false,
+    // 是否检查js是否符合语法规范
+    "checkJs": false,
+    // 不生成编译文件,默认false
+    "noEmit": false,
+    // 发生错误时不生成编译文件
+    "noEmitOnError": false,
+
+    // 所有严格模式的总开关,默认false
+    "strict": true,
+
+    // 用来设置编译后的文件是否开启严格模式,默认false
+    "alwaysStrict": true,
+
+    // 不允许使用隐式any类型,默认false
+    "noImplicitAny": false,
+
+    // 不允许隐式类型的this
+    "noImplicitThis": true,
+
+    // 严格检查null
+    "strictNullChecks": true,
+
+  },
+  // "include": ["./src/**/*"]  **表示任意目录, *表示任意文件(根目录下面的任意目录下的任意文件)
+  "include": ["./chapter01"]
+}
