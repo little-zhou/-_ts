@@ -11,3 +11,29 @@ https://unix.stackexchange.com/questions/115886/anyway-to-navigate-percentage-wi
 
 gg Move to the first line of the file
 G Move to the last line
+
+20240403
+1. there exists a big dataframe(size(3400000, 8)),i want to get subdataframe by column values
+   # first solusion
+
+   # get unique y name, then get every group data by y name
+   y_values = data[v_y_name].unique().tolist()
+   for y_value in y_values:
+    # one segment data
+    # segment_data = data[data[v_y_name] == y_value] (34s)
+
+    # segment_data = data.loc[data[v_y_name] == y_value] (34s)
+
+
+   it's too slow then i think why not group by v_y_name then get every group dataframe by name,
+   then i try following code:
+
+   y_groups = data.groupby(v_y_name)
+   y_values = data[v_y_name].unique().tolist()
+   for y_value in y_values:
+     # much faster
+     segment_data = y_groups.get_group(y_value) (0.5s)
+   
+
+   
+   
