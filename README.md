@@ -33,7 +33,9 @@ G Move to the last line
    for y_value in y_values:
      # much faster
      segment_data = y_groups.get_group(y_value) (0.5s)
-   
+
+
+   https://www.geeksforgeeks.org/ways-to-filter-pandas-dataframe-by-column-values/
 
    
    
